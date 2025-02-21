@@ -19,7 +19,7 @@ const Navbar = () => {
         <Text
           color="#909090"
           fontWeight="bold"
-          fontSize="25px"
+          fontSize="40px"
         >
           My Perso
           <Text color="#303030" as="span">nal Website</Text>

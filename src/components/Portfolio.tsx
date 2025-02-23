@@ -1,14 +1,5 @@
-import {
-  Badge,
-  Box,
-  Button,
-  Card,
-  Container,
-  HStack,
-  Text,
-} from "@chakra-ui/react";
+import { Box, Container, Grid, GridItem, Stack, Text } from "@chakra-ui/react";
 import Image from "next/image";
-import React from "react";
 
 const Portfolio = () => {
   return (
@@ -21,68 +12,37 @@ const Portfolio = () => {
           <Image src="/line.png" alt="icon" width="110" height={30} />
         </Box>
         <Container mt="10">
-          <Card.Root flexDirection="column" overflow="hidden" maxW="full">
-            <Card.Title
-              mt="10"
-              fontSize="4xl"
-              fontWeight="semibold"
-              justifyContent="center"
-              alignSelf="center"
-            >
-              Aplikasi Layanan Service Alat Musik
-            </Card.Title>
-            <Text color="#909090" alignSelf="center" mt="5" mb="10">
-              Android Studio, Firebase, Kotlin, XML
-            </Text>
-            <Card.Root flexDirection="row" overflow="hidden" maxW="full" p="14">
-              <Box>
-                <Card.Body>
-                  <Card.Title mb="2">Situation:</Card.Title>
-                  <Card.Description mb="2">
-                    Banyak pemilik alat musik kesulitan mencari tempat service
-                    terpercaya. Saya <br /> mengembangkan aplikasi yang menghubungkan
-                    pelanggan dengan penyedia layanan <br /> service alat musik,
-                    termasuk fitur tracking status service secara real-time.
-                  </Card.Description>
-                  <Card.Title mb="2">Task:</Card.Title>
-                  <Card.Description mb="2">
-                    Membangun aplikasi mobile dengan UI/UX yang ramah pengguna
-                    serta backend <br /> berbasis Firebase untuk manajemen data
-                    pelanggan dan barang yang diperbaiki.
-                  </Card.Description>
-                  <Card.Title mb="2">Action:</Card.Title>
-                  <Card.Description mb="2">
-                    Menggunakan Android Studio untuk mengembangkan aplikasi
-                    android desain modern. <br />
-                    Mengimplementasikan Firebase Authentication untuk login
-                    admin dan user. <br />
-                    Menggunakan Firebase Realtime Database untuk menyimpan data
-                    service. <br />
-                    Mengembangkan fitur scan QR Code barang untuk melihat data
-                    barang. <br />
-                  </Card.Description>
-                  <Card.Title mb="2">Result:</Card.Title>
-                  <Card.Description mb="2">
-                    Aplikasi digunakan oleh lebih dari 100 pelanggan dalam 3
-                    bulan pertama. <br />
-                    Proses pencatatan dan update status service menjadi lebih
-                    efisien. <br />
-                    Feedback positif dari pengguna mengenai kemudahan akses
-                    layanan. <br />
-                  </Card.Description>
-                </Card.Body>
-              </Box>
-              <Box>
-                <Image
-                  objectFit="cover"
-                  width="500"
-                  height="600"
-                  src="/aplikasiservice.png"
-                  alt="Caffe Latte"
-                />
-              </Box>
-            </Card.Root>
-          </Card.Root>
+          <Stack>
+            <Container justifyItems="center" mb="5">
+              <Text fontSize="4xl" fontWeight="semibold">Aplikasi Layanan Service Alat Musik</Text>
+              <Text color="#909090">Android Studio, Firebase, Kotlin, XML</Text>
+            </Container>
+            <Grid templateColumns="repeat(2, 1fr)" gap="10">
+              <GridItem alignContent="center">
+                <Text>
+                  Saya mengembangkan aplikasi mobile berbasis Android Studio <br /> dan
+                  Firebase untuk membantu pemilik alat musik menemukan layanan
+                  service terpercaya. Aplikasi ini memiliki fitur login
+                  admin/user, tracking status <br /> service secara real-time, serta
+                  pemindaian QR Code untuk melihat <br /> informasi barang. Dengan
+                  UI/UX yang ramah pengguna dan backend <br /> yang efisien, aplikasi
+                  ini telah digunakan oleh lebih dari 100 pelanggan <br /> dalam 3
+                  bulan pertama, meningkatkan efisiensi pencatatan <br /> dan pembaruan
+                  status service secara signifikan.
+                </Text>
+              </GridItem>
+              <GridItem>
+                <Box justifyItems="center" alignContent="center" height="auto">
+                  <Image
+                    src="/aplikasiservice.png"
+                    alt="aplikasi"
+                    width="400"
+                    height="400"
+                  ></Image>
+                </Box>
+              </GridItem>
+            </Grid>
+          </Stack>
         </Container>
       </Container>
     </Box>

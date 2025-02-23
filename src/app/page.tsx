@@ -4,6 +4,7 @@ import Experience from "@/components/Experience";
 import Herosection from "@/components/Herosection";
 import Myskills from "@/components/Myskills";
 import Portfolio from "@/components/Portfolio";
+import Testimonials from "@/components/Testimonials";
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <Myskills />
       <Portfolio />
       <Experience />
+      <Testimonials />
       <ContactMe />
     </div>
   );

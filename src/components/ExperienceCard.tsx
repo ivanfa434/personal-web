@@ -1,15 +1,15 @@
-import { Button, Card, Grid, GridItem, List } from "@chakra-ui/react";
-import React from "react";
-import { Avatar } from "./ui/avatar";
+import { Box, Card, Grid, GridItem, List, Text } from "@chakra-ui/react";
+import Image from "next/image";
 
 const ExperienceCard = () => {
   return (
-    <Grid
-      mt="10"
-      templateColumns="repeat{2, 1fr}"
-      display="flex"
-      gap="10"
-    >
+    <Grid mt="10" templateColumns="repeat{4, 1fr}" display="flex" gap="10">
+      <GridItem>
+        <Text fontSize="6xl">1</Text>
+        <Box>
+          <Image src="/line.png" alt="icon" width="40" height="60" />
+        </Box>
+      </GridItem>
       <GridItem>
         <Card.Root w="500px" p="4">
           <Card.Body gap="2">
@@ -37,7 +37,13 @@ const ExperienceCard = () => {
         </Card.Root>
       </GridItem>
       <GridItem>
-        <Card.Root w="500px" p="4">
+        <Text fontSize="6xl">2</Text>
+        <Box>
+          <Image src="/line.png" alt="icon" width="40" height="60" />
+        </Box>
+      </GridItem>
+      <GridItem>
+        <Card.Root w="450px" p="4">
           <Card.Body gap="2">
             <Card.Title mt="2">
               Software Engineer - Digital Forensics Research | 2024

@@ -13,7 +13,7 @@ const Experience = () => {
         <Box>
           <Image src="/line.png" alt="icon" width="110" height={30} />
         </Box>
-        <Container>
+        <Container mt="28">
             <ExperienceCard />
         </Container>
       </Container>

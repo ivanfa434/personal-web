@@ -11,7 +11,7 @@ import Image from "next/image";
 
 const Herosection = () => {
   return (
-    <Box py={"1"} bgImage="url(/background.png)">
+    <Box py={"24"} bgImage="url(/background.png)">
       <Container>
         <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} pt="-10">
           <GridItem display="flex" alignItems="center">

@@ -1,3 +1,5 @@
+"use client"
+
 import {
   Box,
   Button,
@@ -7,6 +9,7 @@ import {
   GridItem,
   Text,
 } from "@chakra-ui/react";
+import { sendGAEvent } from "@next/third-parties/google";
 import Image from "next/image";
 
 const Herosection = () => {
@@ -44,6 +47,7 @@ const Herosection = () => {
                 bgColor="#303030"
                 padding="-10"
                 width="32"
+                onClick={() => sendGAEvent("ini adalah contact" , "ini bukan apa apa" , "jangan di pencet")}
               >
                 Contact Me
               </Button>

@@ -5,16 +5,21 @@ import ExperienceCard from "./ExperienceCard";
 
 const Experience = () => {
   return (
-    <Box  mt="10" bgImage="url(/background.png)">
+    <Box mt="10" bgImage="url(/background.png)">
       <Container>
         <Text fontSize="6xl" fontWeight="semibold">
           My Experience
         </Text>
         <Box>
-          <Image src="/line.png" alt="icon" width="110" height={30} />
+          <Image
+            src="/line.png"
+            alt="icon"
+            width={110}
+            height={30}
+          />
         </Box>
         <Container mt="28">
-            <ExperienceCard />
+          <ExperienceCard />
         </Container>
       </Container>
     </Box>

@@ -1,4 +1,12 @@
-import { Box, Card, Grid, GridItem, List, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Card,
+  Grid,
+  GridItem,
+  List,
+  ListItem,
+  Text,
+} from "@chakra-ui/react";
 import Image from "next/image";
 
 const ExperienceCard = () => {
@@ -16,22 +24,18 @@ const ExperienceCard = () => {
             <Card.Title mt="2">
               Full-Stack Developer (Freelance) | 2023 - Sekarang
             </Card.Title>
-            <Card.Description>
-              <List.Root>
-                <List.Item>
-                  Mengerjakan berbagai proyek web dan mobile, termasuk aplikasi
-                  berbasis Firebase dan React.
-                </List.Item>
-                <List.Item>
-                  Mengerjakan berbagai proyek web dan mobile, termasuk aplikasi
-                  berbasis Firebase dan React.
-                </List.Item>
-                <List.Item>
-                  Mengintegrasikan sistem pembayaran online dalam aplikasi
-                  e-commerce.
-                </List.Item>
-              </List.Root>
-            </Card.Description>
+            <List.Root>
+              <ListItem>
+                Mengerjakan berbagai proyek web dan mobile, termasuk aplikasi
+                berbasis Firebase dan React.
+              </ListItem>
+              <ListItem>
+                Menggunakan teknologi seperti React, Next.js, dan Chakra UI.
+              </ListItem>
+              <ListItem>
+                Membuat aplikasi yang responsif dan performa tinggi.
+              </ListItem>
+            </List.Root>
           </Card.Body>
           <Card.Footer justifyContent="flex-end"></Card.Footer>
         </Card.Root>
@@ -48,21 +52,19 @@ const ExperienceCard = () => {
             <Card.Title mt="2">
               Software Engineer - Digital Forensics Research | 2024
             </Card.Title>
-            <Card.Description>
               <List.Root>
-                <List.Item>
+                <ListItem>
                   Mengembangkan sistem rekonstruksi file yang hilang dalam
                   sistem Windows.
-                </List.Item>
-                <List.Item>
+                </ListItem>
+                <ListItem>
                   Menggunakan hashing untuk memastikan integritas data
                   investigasi.
-                </List.Item>
-                <List.Item>
+                </ListItem>
+                <ListItem>
                   Melakukan analisis dan dokumentasi proses investigasi digital.
-                </List.Item>
+                </ListItem>
               </List.Root>
-            </Card.Description>
           </Card.Body>
           <Card.Footer justifyContent="flex-end"></Card.Footer>
         </Card.Root>

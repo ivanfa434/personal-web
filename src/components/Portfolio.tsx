@@ -9,7 +9,7 @@ const Portfolio = () => {
           Portfolio
         </Text>
         <Box>
-          <Image src="/line.png" alt="icon" width="110" height={30} />
+          <Image src="/line.png" alt="icon" width={110} height={30} />
         </Box>
         <Container mt="10">
           <Stack>

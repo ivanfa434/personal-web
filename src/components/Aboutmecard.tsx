@@ -1,4 +1,5 @@
-import { Box, Heading, Text, Flex, Image } from "@chakra-ui/react";
+import { Box, Heading, Text, Flex } from "@chakra-ui/react";
+import Image from "next/image";
 import React, { FC } from "react";
 
 interface AboutMeCard {
@@ -12,8 +13,9 @@ const Aboutmecard: FC<AboutMeCard> = ({ title, description }) => {
       border="1px solid #e2e8f0"
       borderRadius="md"
       p="4"
-      width="250px"
+      width={{ base: "100%", sm: "250px" }}
       height="auto"
+      mx="auto"
     >
       <Flex alignItems="center" mb="2">
         <Box>

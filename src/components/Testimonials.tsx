@@ -1,60 +1,88 @@
 import {
-  Avatar,
   Box,
   Container,
+  Flex,
   HStack,
-  RatingGroup,
   Stack,
   Text,
-} from "@chakra-ui/react";
+  VStack,
+}from "@chakra-ui/react";
+
 import Image from "next/image";
 import React from "react";
+import { Avatar } from "./ui/avatar";
+
+const testimonials = [
+  {
+    id: 1,
+    name: "Matthew Jones",
+    role: "CTO, Company",
+    image: "https://randomuser.me/api/portraits/men/70.jpg",
+    rating: 5,
+    review: "Sage is a great software engineer. He is very professional and knowledgeable.",
+  },
+  {
+    id: 2,
+    name: "Emily Carter",
+    role: "Project Manager, TechCorp",
+    image: "https://randomuser.me/api/portraits/women/68.jpg",
+    rating: 5,
+    review: "Working with Sage was a fantastic experience. His attention to detail is remarkable!",
+  },
+  {
+    id: 3,
+    name: "Daniel Wright",
+    role: "CEO, Startup Inc.",
+    image: "https://randomuser.me/api/portraits/men/75.jpg",
+    rating: 5,
+    review: "Sage delivers high-quality code and meets deadlines efficiently. Highly recommend!",
+  },
+];
 
 const Testimonials = () => {
   return (
-    <Container justifyItems="center" mt="10">
-      <Text fontSize="2xl" color="#909090" fontFamily="mono">
-        Testimonials
-      </Text>
-      <Box mt="4">
-        <Image src="/line2.png" alt="icon" height="500" width="400" />
-      </Box>
-      <Container mt="5">
-        <Stack maxW="320px" gap="4" color="black">
-          <RatingGroup.Root
-            colorPalette="orange"
-            readOnly
-            count={5}
-            defaultValue={5}
-            size="xs"
+    <Container maxW="container.lg" py={10}>
+      <VStack gap={4} textAlign="center">
+        <Text fontSize="2xl" color="gray.600" fontFamily="mono">
+          Testimonials
+        </Text>
+        <Image src="/line2.png" alt="divider" width={100} height={10} />
+      </VStack>
+
+      <Flex
+        direction={{ base: "column", md: "row" }}
+        justify="center"
+        align="center"
+        mt={8}
+        gap={6}
+      >
+        {testimonials.map((testimonial) => (
+          <Box
+            key={testimonial.id}
+            p={6}
+            bg="white"
+            boxShadow="lg"
+            borderRadius="lg"
+            maxW="sm"
+            textAlign="left"
           >
-            <RatingGroup.HiddenInput />
-            <RatingGroup.Control>
-              {Array.from({ length: 5 }).map((_, index) => (
-                <RatingGroup.Item key={index} index={index + 1}>
-                  <RatingGroup.ItemIndicator />
-                </RatingGroup.Item>
+            <HStack mb={3}>
+              {Array.from({ length: testimonial.rating }).map((_, i) => (
+                <Text key={i} color="orange.400">★</Text>
               ))}
-            </RatingGroup.Control>
-          </RatingGroup.Root>
+            </HStack>
+            <Text mb={4} color="gray.700">{testimonial.review}</Text>
 
-          <Text>
-            Sage is a great software engineer. He is very professional and
-            knowledgeable.
-          </Text>
-
-          <HStack gap="4">
-            <Avatar.Root>
-              <Avatar.Fallback name="Matthew Jones" />
-              <Avatar.Image src="https://randomuser.me/api/portraits/men/70.jpg" />
-            </Avatar.Root>
-            <Stack textStyle="sm" gap="0">
-              <Text fontWeight="medium">Matthew Jones</Text>
-              <Text color="fg.muted">CTO, Company</Text>
-            </Stack>
-          </HStack>
-        </Stack>
-      </Container>
+            <HStack mt={4}>
+              <Avatar name={testimonial.name} src={testimonial.image} />
+              <Stack gap={0}>
+                <Text fontWeight="bold">{testimonial.name}</Text>
+                <Text fontSize="sm" color="gray.500">{testimonial.role}</Text>
+              </Stack>
+            </HStack>
+          </Box>
+        ))}
+      </Flex>
     </Container>
   );
 };
